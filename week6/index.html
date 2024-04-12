@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            var h = $('header').height();
+            console.log(h);
+            $(document).scroll(() => {
+                var wh = $(window).scrollTop();
+                console.log(wh);
+                if (wh >= h)
+                    $('header').addClass('sticky').addClass('top-0').addClass('bg-green-200');
+                else
+                    $('header').removeClass('sticky').removeClass('top-0').removeClass('bg-green-200');
+
+            })
+        })
+    </script>
+</head>
+
+<body class="container mx-auto">
+    <header class="flex items-center justify-between h-32 bg-red-100">
+        <li>register</li>
+        <li>login</li>
+    </header>
+    <div class="h-screen bg-indigo-500">
+    </div>
+
+    <div class="h-screen bg-orange-100">
+
+    </div>
+</body>
+
+</html>
